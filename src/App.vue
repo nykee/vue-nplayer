@@ -1,18 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <vue-nplayer :songLists="songLists"></vue-nplayer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import axios from 'axios'
 
 export default {
   name: 'App',
+    data(){
+      return{
+          songLists:[]
+      }
+    },
   components: {
-    HelloWorld
-  }
+  },
+    mounted(){
+      axios.get('https://api.mlwei.com/music/api/wy/?key=523077333&cache=1&type=songlist&id=2520942859').then(res=>{
+          if(res.data.Code === "OK"){
+              for (let i = 0, len = res.data.Body.length; i < len; i++) {
+                  res.data.Body[i].index = i + 1;
+              }
+              this.songLists = res.data.Body;
+              console.log(this.songLists[0])
+
+//
+          }
+//          console.log(res);
+      })
+
+    }
 }
 </script>
 

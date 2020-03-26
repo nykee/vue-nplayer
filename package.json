@@ -1,18 +1,21 @@
 {
   "name": "vue-nplayer",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.7",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "keywords": ["Vue音乐播放组件","vue-nplayer","Vue音乐播放器","Vue音乐播放"],
   "dependencies": {
     "core-js": "^3.6.4",
+    "font-awesome": "^4.7.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
+    "axios": "^0.19.2",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
