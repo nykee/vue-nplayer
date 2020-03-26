@@ -10,7 +10,7 @@
 
 ### 安装
 ```
-cnpm 或者yarn
+cnpm i vue-nplayer --save或者yarn add vue-nplayer
 ```
 
 ### 注册
